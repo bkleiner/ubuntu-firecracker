@@ -7,9 +7,8 @@ truncate -s 512M /output/image.ext4
 mkfs.ext4 /output/image.ext4
 
 mount /output/image.ext4 /rootfs
-mount --bind / /rootfs/mnt
-
 debootstrap --include openssh-server,netplan.io,nano bionic /rootfs http://archive.ubuntu.com/ubuntu/
+mount --bind / /rootfs/mnt
 
 chroot /rootfs /bin/bash /mnt/script/provision.sh
 
