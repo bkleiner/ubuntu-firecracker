@@ -1,7 +1,7 @@
 #! /bin/bash
 set -ex
 
-dpkg -i /mnt/linux-image-*.deb
+dpkg -i /mnt/root/linux*.deb
 
 echo 'ubuntu-bionic' > /etc/hostname
 passwd -d root

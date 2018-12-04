@@ -18,7 +18,7 @@ Start the image with firectl
 cp output/vmlinux ubuntu-vmlinux
 cp output/image.ext4 ubuntu.ext4
 # resize image
-turncate -s 5G ubuntu.ext4
+truncate -s 5G ubuntu.ext4
 resize2fs ubuntu.ext4
 #launch firecracker
 firectl --kernel=ubuntu-vmlinux --root-drive=ubuntu.ext4 --kernel-opts="init=/bin/systemd noapic reboot=k panic=1 pci=off nomodules console=ttyS0"
