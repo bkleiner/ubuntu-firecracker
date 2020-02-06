@@ -23,3 +23,7 @@ resize2fs ubuntu.ext4
 #launch firecracker
 firectl --kernel=ubuntu-vmlinux --root-drive=ubuntu.ext4 --kernel-opts="init=/bin/systemd noapic reboot=k panic=1 pci=off nomodules console=ttyS0"
 ```
+
+## Contributions
+This project is actively looking for contributions/maintainers.
+I (bkleiner) have stopped using firecracker a while ago.
