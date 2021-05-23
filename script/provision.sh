@@ -3,7 +3,7 @@ set -ex
 
 dpkg -i /mnt/root/linux*.deb
 
-echo 'ubuntu-bionic' > /etc/hostname
+echo 'ubuntu-focal' > /etc/hostname
 passwd -d root
 mkdir /etc/systemd/system/serial-getty@ttyS0.service.d/
 cat <<EOF > /etc/systemd/system/serial-getty@ttyS0.service.d/autologin.conf
